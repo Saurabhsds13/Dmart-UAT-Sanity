@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Test for Sanity">
+	<test
+		thread-count="5"
+		name="Sanity">
+		<parameter
+			name="mobileNo"
+			value="9975899660" />
+		<parameter
+			name="otp"
+			value="899660" />
+		<classes>
+			<class name="tests.HomePage_Tests" />
+		</classes>
+	</test>
+</suite>

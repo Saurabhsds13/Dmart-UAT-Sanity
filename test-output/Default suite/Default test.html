@@ -1,0 +1,528 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jul 04 11:29:25 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>53 seconds (53176 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.HomePage_Tests.searchTest()'><b>searchTest</b><br>Test class: tests.HomePage_Tests</td>
+<td><div><pre>com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\dispatchers\dispatcher.js:273:44)
+    at transport.onmessage (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:478:21)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:160)
+	at com.microsoft.playwright.Locator.click(Locator.java:2468)
+	at pages.HomePage.searchItem(HomePage.java:37)
+	at tests.HomePage_Tests.searchTest(HomePage_Tests.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\dispatchers\dispatcher.js:273:44)
+    at transport.onmessage (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:478:21)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	... 39 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace288306765", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace288306765'><pre>com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\dispatchers\dispatcher.js:273:44)
+    at transport.onmessage (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:478:21)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:160)
+	at com.microsoft.playwright.Locator.click(Locator.java:2468)
+	at pages.HomePage.searchItem(HomePage.java:37)
+	at tests.HomePage_Tests.searchTest(HomePage_Tests.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\dispatchers\dispatcher.js:273:44)
+    at transport.onmessage (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:478:21)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	... 39 more
+</pre></div></td>
+<td>0</td>
+<td>tests.HomePage_Tests@52b1beb6</td></tr>
+<tr>
+<td title='tests.HomePage_Tests.navigationTest()'><b>navigationTest</b><br>Test class: tests.HomePage_Tests</td>
+<td><div><pre>com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\dispatchers\dispatcher.js:273:44)
+    at transport.onmessage (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:478:21)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:160)
+	at com.microsoft.playwright.Locator.click(Locator.java:2468)
+	at pages.HomePage.navigation(HomePage.java:43)
+	at tests.HomePage_Tests.navigationTest(HomePage_Tests.java:27)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\dispatchers\dispatcher.js:273:44)
+    at transport.onmessage (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:478:21)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	... 39 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1495608502", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1495608502'><pre>com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\dispatchers\dispatcher.js:273:44)
+    at transport.onmessage (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:478:21)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:160)
+	at com.microsoft.playwright.Locator.click(Locator.java:2468)
+	at pages.HomePage.navigation(HomePage.java:43)
+	at tests.HomePage_Tests.navigationTest(HomePage_Tests.java:27)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\dispatchers\dispatcher.js:273:44)
+    at transport.onmessage (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:478:21)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	... 39 more
+</pre></div></td>
+<td>0</td>
+<td>tests.HomePage_Tests@52b1beb6</td></tr>
+<tr>
+<td title='tests.HomePage_Tests.pincodeTest()'><b>pincodeTest</b><br>Test class: tests.HomePage_Tests</td>
+<td><div><pre>com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError:Target page, context or browser has been closed
+Error
+    at captureRawStack (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\stackTrace.js:49:17)
+    at LongStandingScope._race (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\manualPromise.js:91:52)
+    at LongStandingScope.race (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\manualPromise.js:84:17)
+    at C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\manualPromise.js:81:43
+    at Array.map (&lt;anonymous&gt;)
+    at LongStandingScope.raceMultiple (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\manualPromise.js:81:32)
+    at Frame.retryWithProgressAndTimeouts (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\frames.js:919:40)
+    at async C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\frames.js:1008:29
+    at async ProgressController.run (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\progress.js:82:22)
+    at async FrameDispatcher.click (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\dispatchers\frameDispatcher.js:158:12)
+    at async LongStandingScope._race (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\dispatchers\dispatcher.js:96:14)
+    at async DispatcherConnection.dispatch (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\dispatchers\dispatcher.js:361:22)
+}
+Call log:
+- waiting for getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(&quot;pincodeimg 400053 Andheri (W&quot;))
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:160)
+	at com.microsoft.playwright.Locator.click(Locator.java:2468)
+	at pages.HomePage.pincodeCheck(HomePage.java:25)
+	at tests.HomePage_Tests.pincodeTest(HomePage_Tests.java:15)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError:Target page, context or browser has been closed
+Error
+    at captureRawStack (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\stackTrace.js:49:17)
+    at LongStandingScope._race (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\manualPromise.js:91:52)
+    at LongStandingScope.race (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\manualPromise.js:84:17)
+    at C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\manualPromise.js:81:43
+    at Array.map (&lt;anonymous&gt;)
+    at LongStandingScope.raceMultiple (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\manualPromise.js:81:32)
+    at Frame.retryWithProgressAndTimeouts (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\frames.js:919:40)
+    at async C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\frames.js:1008:29
+    at async ProgressController.run (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\progress.js:82:22)
+    at async FrameDispatcher.click (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\dispatchers\frameDispatcher.js:158:12)
+    at async LongStandingScope._race (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\dispatchers\dispatcher.js:96:14)
+    at async DispatcherConnection.dispatch (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\dispatchers\dispatcher.js:361:22)
+}
+Call log:
+- waiting for getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(&quot;pincodeimg 400053 Andheri (W&quot;))
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	... 39 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace283039401", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace283039401'><pre>com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError:Target page, context or browser has been closed
+Error
+    at captureRawStack (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\stackTrace.js:49:17)
+    at LongStandingScope._race (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\manualPromise.js:91:52)
+    at LongStandingScope.race (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\manualPromise.js:84:17)
+    at C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\manualPromise.js:81:43
+    at Array.map (&lt;anonymous&gt;)
+    at LongStandingScope.raceMultiple (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\manualPromise.js:81:32)
+    at Frame.retryWithProgressAndTimeouts (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\frames.js:919:40)
+    at async C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\frames.js:1008:29
+    at async ProgressController.run (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\progress.js:82:22)
+    at async FrameDispatcher.click (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\dispatchers\frameDispatcher.js:158:12)
+    at async LongStandingScope._race (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\dispatchers\dispatcher.js:96:14)
+    at async DispatcherConnection.dispatch (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\dispatchers\dispatcher.js:361:22)
+}
+Call log:
+- waiting for getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(&quot;pincodeimg 400053 Andheri (W&quot;))
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:160)
+	at com.microsoft.playwright.Locator.click(Locator.java:2468)
+	at pages.HomePage.pincodeCheck(HomePage.java:25)
+	at tests.HomePage_Tests.pincodeTest(HomePage_Tests.java:15)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError:Target page, context or browser has been closed
+Error
+    at captureRawStack (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\stackTrace.js:49:17)
+    at LongStandingScope._race (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\manualPromise.js:91:52)
+    at LongStandingScope.race (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\manualPromise.js:84:17)
+    at C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\manualPromise.js:81:43
+    at Array.map (&lt;anonymous&gt;)
+    at LongStandingScope.raceMultiple (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\manualPromise.js:81:32)
+    at Frame.retryWithProgressAndTimeouts (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\frames.js:919:40)
+    at async C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\frames.js:1008:29
+    at async ProgressController.run (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\progress.js:82:22)
+    at async FrameDispatcher.click (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\dispatchers\frameDispatcher.js:158:12)
+    at async LongStandingScope._race (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\dispatchers\dispatcher.js:96:14)
+    at async DispatcherConnection.dispatch (C:\Users\SAURAB~1.SON\AppData\Local\Temp\playwright-java-15458525257276095389\package\lib\server\dispatchers\dispatcher.js:361:22)
+}
+Call log:
+- waiting for getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(&quot;pincodeimg 400053 Andheri (W&quot;))
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	... 39 more
+</pre></div></td>
+<td>29</td>
+<td>tests.HomePage_Tests@52b1beb6</td></tr>
+</table><p>
+</body>
+</html>

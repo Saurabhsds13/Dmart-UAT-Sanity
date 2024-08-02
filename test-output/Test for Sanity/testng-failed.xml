@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Test for Sanity]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Sanity(failed)">
+    <parameter name="otp" value="899660"/>
+    <parameter name="mobileNo" value="9975899660"/>
+    <classes>
+      <class name="tests.HomePage_Tests">
+        <methods>
+          <include name="profileDetailsTest"/>
+          <include name="myAddressTest"/>
+          <include name="tearDown"/>
+          <include name="pincodeTest"/>
+          <include name="loginTest" invocation-numbers="0"/>
+          <include name="setUp"/>
+          <include name="searchTest"/>
+          <include name="myOrdersTest"/>
+        </methods>
+      </class> <!-- tests.HomePage_Tests -->
+    </classes>
+  </test> <!-- Sanity(failed) -->
+</suite> <!-- Failed suite [Test for Sanity] -->
